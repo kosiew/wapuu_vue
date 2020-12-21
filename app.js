@@ -6,9 +6,10 @@
                         <div class="pig-say">
                             <div class="pig-info-arrow"></div>
                             <div class="pig-info">
-                                <p><b></b> {{message}} <br/>
+                                <p><b> {{message}} </b> <br/>
                                 <div class="pig-info-more">
-                                {{moreMessage}}
+                                {{moreMessage}} <br/>
+                                v.{{version}}
                                 </div>              
                             </div>
                         </div>
@@ -18,7 +19,8 @@
     const peppaApp = new Vue({
         data: {
             message: 'Hello world!',
-            moreMessage: 'more message'
+            moreMessage: 'more message',
+            version: 1
         },
        methods: {
             setMessage(message, moreMessage='') {
