@@ -7,13 +7,9 @@
                             <div class="peppa-info-arrow"></div>
                             <div class="peppa-info">
                                 <p><b>Wapuu:</b> {{message}} <br/>
-                                <span>User: {{userInfo.login}} / </span>
-                                <span>Repos: {{userInfo.public_repos}}<br></span>
-                                <span>Gists: {{userInfo.public_gists}} / </span>
-                                <span>Followers: {{userInfo.followers}}<br></span>     
                                 <div class="peppa-info-more">
+                                {{more-message}}
                                 </div>              
-                                <div class="action-footer"><p>Thanks <a href="https://github.com/tobyqin"> Siew </a> bringing me here ^_^</p></div>
                             </div>
                         </div>
                     </span>
@@ -21,11 +17,8 @@
 
     const peppaApp = new Vue({
         data: {
-            message: 'Hello world!',
-            userInfo: {'login':'Unknown',
-            'public_repos':'...',
-            'public_gists':'...',
-            'followers':'...'}
+            message: 'Hi',
+            more-message: ''
         },
         methods: {
             getUserId(url) {
@@ -53,7 +46,7 @@
 
 
 
-    window.githubInfo = {
+    window.peppaInfo = {
         isReady(successCallBack) {
             $(document).ready(function(){
                 successCallBack();
@@ -89,17 +82,22 @@
                   transition:all .3s ease-out;
                   -moz-transition:all .3s ease-out;
                   -webkit-transition:all .3s ease-out;
-                  -o-transition:all .3s ease-out}#peppa-img:hover{left:-40px;
+                  -o-transition:all .3s ease-out}
+              #peppa-img:hover{left:-40px;
                   transform:rotate(-10deg);
                   -ms-transform:rotate(-10deg);
                   -moz-transform:rotate(-10deg);
                   -webkit-transform:rotate(-10deg);
                   -o-transform:rotate(-10deg);
-                  cursor:pointer}#peppa-img:hover + .peppa-say{visibility:visible;
+                  cursor:pointer}
+              #peppa-img:hover + .peppa-say{visibility:visible;
                   width:auto}
               #peppa-img:hover + .peppa-say .peppa-email{
-                  visibility:hidden}#peppa-app .peppa-say{visibility:collapse;
-                  width:0}#peppa-app .peppa-say:hover{visibility:visible}#peppa-app .peppa-info{height:100px;
+                  visibility:hidden}
+              #peppa-app .peppa-say{visibility:collapse;
+                  width:0}
+              #peppa-app .peppa-say:hover{visibility:visible}
+              #peppa-app .peppa-info{height:100px;
                   margin-left:123px;
                   margin-top:-35px;
                   background-color:#D40082;
@@ -130,10 +128,13 @@
                   border-bottom:13px solid transparent}
             #peppa-app .peppa-info .action-header{
                 border-bottom:1px solid rgba(255,255,255,0.6);
-                  width:100px}#peppa-app .peppa-info h3{margin-top:12px;
+                  width:100px}
+            #peppa-app .peppa-info h3{margin-top:12px;
                   font-size:14px;
-                  font-weight:600}#peppa-app a.action-link{text-decoration:none;
-                  font-size:12px}#peppa-app a.action-link:hover{cursor:pointer;
+                  font-weight:600}
+            #peppa-app a.action-link{text-decoration:none;
+                  font-size:12px}
+            #peppa-app a.action-link:hover{cursor:pointer;
                   text-decoration:underline}
             #peppa-app .peppa-info-more{
                 visibility:collapse}
@@ -148,7 +149,8 @@
             #peppa-app .action-footer a{
                 cursor:pointer}
             #peppa-app .action-footer a:hover{
-                text-decoration:underline}#peppa-app a:hover{cursor:pointer}
+                text-decoration:underline}
+            #peppa-app a:hover{cursor:pointer}
         </style>`;
             $('head').append(css);
         },
