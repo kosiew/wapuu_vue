@@ -67,6 +67,9 @@
             setTimeout(() => {
                 githubApp.$mount('#github-info-app');
             }, 3000);
+        },
+        setMessage(message, moreMessage='') {
+            githubApp.setMessage(message, moreMessage);
         }
     };
 })(window, jQuery);
