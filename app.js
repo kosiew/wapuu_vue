@@ -3,15 +3,15 @@
                       <span>
                         <img id="peppa-img"  
                         src="https://raw.githubusercontent.com/tobyqin/tampermonkey_vue/master/github-info/peppa.png">
-                        <div class="pig-say">
-                            <div class="pig-info-arrow"></div>
-                            <div class="pig-info">
+                        <div class="peppa-say">
+                            <div class="peppa-info-arrow"></div>
+                            <div class="peppa-info">
                                 <p><b>Wapuu:</b> {{message}} <br/>
                                 <span>User: {{userInfo.login}} / </span>
                                 <span>Repos: {{userInfo.public_repos}}<br></span>
                                 <span>Gists: {{userInfo.public_gists}} / </span>
                                 <span>Followers: {{userInfo.followers}}<br></span>     
-                                <div class="pig-info-more">
+                                <div class="peppa-info-more">
                                 </div>              
                                 <div class="action-footer"><p>Thanks <a href="https://github.com/tobyqin"> Siew </a> bringing me here ^_^</p></div>
                             </div>
@@ -95,11 +95,11 @@
                   -moz-transform:rotate(-10deg);
                   -webkit-transform:rotate(-10deg);
                   -o-transform:rotate(-10deg);
-                  cursor:pointer}#peppa-img:hover + .pig-say{visibility:visible;
+                  cursor:pointer}#peppa-img:hover + .peppa-say{visibility:visible;
                   width:auto}
-              #peppa-img:hover + .pig-say .pig-email{
-                  visibility:hidden}#peppa-app .pig-say{visibility:collapse;
-                  width:0}#peppa-app .pig-say:hover{visibility:visible}#peppa-app .pig-info{height:100px;
+              #peppa-img:hover + .peppa-say .peppa-email{
+                  visibility:hidden}#peppa-app .peppa-say{visibility:collapse;
+                  width:0}#peppa-app .peppa-say:hover{visibility:visible}#peppa-app .peppa-info{height:100px;
                   margin-left:123px;
                   margin-top:-35px;
                   background-color:#D40082;
@@ -114,13 +114,13 @@
                   border-radius:12px;
                   text-shadow:2px 2px 5px #333;
                   line-height:20px}
-            #peppa-app .pig-info a{
+            #peppa-app .peppa-info a{
                 text-decoration:none}
-            #peppa-app .pig-info a:hover{
+            #peppa-app .peppa-info a:hover{
                 text-decoration:underline}
-            #peppa-app .pig-info label{
+            #peppa-app .peppa-info label{
                 font-size:.5em}
-            #peppa-app .pig-info-arrow{
+            #peppa-app .peppa-info-arrow{
                 margin-left:110px;
                   margin-top:20px;
                   width:0;
@@ -128,16 +128,16 @@
                   border-top:13px solid transparent;
                   border-right:26px solid #D40082;
                   border-bottom:13px solid transparent}
-            #peppa-app .pig-info .action-header{
+            #peppa-app .peppa-info .action-header{
                 border-bottom:1px solid rgba(255,255,255,0.6);
-                  width:100px}#peppa-app .pig-info h3{margin-top:12px;
+                  width:100px}#peppa-app .peppa-info h3{margin-top:12px;
                   font-size:14px;
                   font-weight:600}#peppa-app a.action-link{text-decoration:none;
                   font-size:12px}#peppa-app a.action-link:hover{cursor:pointer;
                   text-decoration:underline}
-            #peppa-app .pig-info-more{
+            #peppa-app .peppa-info-more{
                 visibility:collapse}
-            #peppa-app .pig-info:hover .pig-info-more{
+            #peppa-app .peppa-info:hover .peppa-info-more{
                 visibility:visible}
             #peppa-app .action-footer p,#peppa-app .action-footer a{
                 position:relative;
