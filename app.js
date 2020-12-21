@@ -8,7 +8,7 @@
                             <div class="peppa-info">
                                 <p><b>Wapuu:</b> {{message}} <br/>
                                 <div class="peppa-info-more">
-                                {{more-message}}
+                                {{moreMessage}}
                                 </div>              
                             </div>
                         </div>
@@ -18,7 +18,7 @@
     const peppaApp = new Vue({
         data: {
             message: 'Hi',
-            more-message: ''
+            moreMessage: ''
         },
         methods: {
             getUserId(url) {
@@ -38,8 +38,9 @@
                     }
                 );
             },
-            setMessage(message) {
+            setMessage(message, moreMessage = '') {
                 this.message = message;
+                this.moreMessage = moreMessage;
             }
         },
         created: function () {
