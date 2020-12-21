@@ -37,6 +37,9 @@
                         this.userInfo = json;
                     }
                 );
+            },
+            setMessage(message) {
+                this.message = message;
             }
         },
         created: function () {
