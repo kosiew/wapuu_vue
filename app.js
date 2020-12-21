@@ -1,25 +1,25 @@
 (function (window, $) {
-    const appTemplate = `<div id="wapuu-app" style="opacity: 1" >
+    const appTemplate = `<div id="peppa-app" style="opacity: 1" >
                       <span>
-                        <img id="wapuu-img"  
-                        src="https://github.com/kosiew/wapuu_vue/blob/master/original_wapuu.png">
-                        <div class="wapuu-say">
-                            <div class="wapuu-info-arrow"></div>
-                            <div class="wapuu-info">
+                        <img id="peppa-img"  
+                        src="https://raw.githubusercontent.com/tobyqin/tampermonkey_vue/master/github-info/peppa.png">
+                        <div class="pig-say">
+                            <div class="pig-info-arrow"></div>
+                            <div class="pig-info">
                                 <p><b>Wapuu:</b> {{message}} <br/>
                                 <span>User: {{userInfo.login}} / </span>
                                 <span>Repos: {{userInfo.public_repos}}<br></span>
                                 <span>Gists: {{userInfo.public_gists}} / </span>
                                 <span>Followers: {{userInfo.followers}}<br></span>     
-                                <div class="wapuu-info-more">
+                                <div class="pig-info-more">
                                 </div>              
-                                <div class="action-footer"><p>Thanks <a href="https://github.com/kosiew"> Siew </a> bringing me here ^_^</p></div>
+                                <div class="action-footer"><p>Thanks <a href="https://github.com/tobyqin"> Siew </a> bringing me here ^_^</p></div>
                             </div>
                         </div>
                     </span>
                     </div>`;
 
-    const githubApp = new Vue({
+    const peppaApp = new Vue({
         data: {
             message: 'Hello world!',
             userInfo: {'login':'Unknown',
@@ -64,10 +64,10 @@
         },
         addStyle() {
             const css = `<style type="text/css">
-              #wapuu-app div,#wapuu-app span,#wapuu-app p,
-              #wapuu-app h1,#wapuu-app h2,#wapuu-app h3,
-              #wapuu-app h4,#wapuu-app a,#wapuu-app img,
-              #wapuu-app b {
+              #peppa-app div,#peppa-app span,#peppa-app p,
+              #peppa-app h1,#peppa-app h2,#peppa-app h3,
+              #peppa-app h4,#peppa-app a,#peppa-app img,
+              #peppa-app b {
                   color:#fff;
                   font-family:HelveticaNeue,Helvetica,Arial,"Microsoft Yahei",sans-serif;
                   font-size:12px;
@@ -76,12 +76,12 @@
                   border:0;
                   box-sizing:border-box;
                   text-align:left}
-              #wapuu-app{
+              #peppa-app{
                   position:fixed;
                   left:-55px;
                   top:40%;
                   z-index:100}
-              #wapuu-img{
+              #peppa-img{
                   position:fixed;
                   left:-55px;
                   top:40%;
@@ -89,17 +89,17 @@
                   transition:all .3s ease-out;
                   -moz-transition:all .3s ease-out;
                   -webkit-transition:all .3s ease-out;
-                  -o-transition:all .3s ease-out}#wapuu-img:hover{left:-40px;
+                  -o-transition:all .3s ease-out}#peppa-img:hover{left:-40px;
                   transform:rotate(-10deg);
                   -ms-transform:rotate(-10deg);
                   -moz-transform:rotate(-10deg);
                   -webkit-transform:rotate(-10deg);
                   -o-transform:rotate(-10deg);
-                  cursor:pointer}#wapuu-img:hover + .wapuu-say{visibility:visible;
+                  cursor:pointer}#peppa-img:hover + .pig-say{visibility:visible;
                   width:auto}
-              #wapuu-img:hover + .wapuu-say .wapuu-email{
-                  visibility:hidden}#wapuu-app .wapuu-say{visibility:collapse;
-                  width:0}#wapuu-app .wapuu-say:hover{visibility:visible}#wapuu-app .wapuu-info{height:100px;
+              #peppa-img:hover + .pig-say .pig-email{
+                  visibility:hidden}#peppa-app .pig-say{visibility:collapse;
+                  width:0}#peppa-app .pig-say:hover{visibility:visible}#peppa-app .pig-info{height:100px;
                   margin-left:123px;
                   margin-top:-35px;
                   background-color:#D40082;
@@ -114,13 +114,13 @@
                   border-radius:12px;
                   text-shadow:2px 2px 5px #333;
                   line-height:20px}
-            #wapuu-app .wapuu-info a{
+            #peppa-app .pig-info a{
                 text-decoration:none}
-            #wapuu-app .wapuu-info a:hover{
+            #peppa-app .pig-info a:hover{
                 text-decoration:underline}
-            #wapuu-app .wapuu-info label{
+            #peppa-app .pig-info label{
                 font-size:.5em}
-            #wapuu-app .wapuu-info-arrow{
+            #peppa-app .pig-info-arrow{
                 margin-left:110px;
                   margin-top:20px;
                   width:0;
@@ -128,35 +128,36 @@
                   border-top:13px solid transparent;
                   border-right:26px solid #D40082;
                   border-bottom:13px solid transparent}
-            #wapuu-app .wapuu-info .action-header{
+            #peppa-app .pig-info .action-header{
                 border-bottom:1px solid rgba(255,255,255,0.6);
-                  width:100px}#wapuu-app .wapuu-info h3{margin-top:12px;
+                  width:100px}#peppa-app .pig-info h3{margin-top:12px;
                   font-size:14px;
-                  font-weight:600}#wapuu-app a.action-link{text-decoration:none;
-                  font-size:12px}#wapuu-app a.action-link:hover{cursor:pointer;
+                  font-weight:600}#peppa-app a.action-link{text-decoration:none;
+                  font-size:12px}#peppa-app a.action-link:hover{cursor:pointer;
                   text-decoration:underline}
-            #wapuu-app .wapuu-info-more{
+            #peppa-app .pig-info-more{
                 visibility:collapse}
-            #wapuu-app .wapuu-info:hover .wapuu-info-more{
+            #peppa-app .pig-info:hover .pig-info-more{
                 visibility:visible}
-            #wapuu-app .action-footer p,#wapuu-app .action-footer a{
+            #peppa-app .action-footer p,#peppa-app .action-footer a{
                 position:relative;
                   margin-top:5px;
                   margin-bottom:0;
                   font-size:10px;
                   color:rgba(255,255,255,0.8)}
-            #wapuu-app .action-footer a{
+            #peppa-app .action-footer a{
                 cursor:pointer}
-            #wapuu-app .action-footer a:hover{
-                text-decoration:underline}#wapuu-app a:hover{cursor:pointer}
+            #peppa-app .action-footer a:hover{
+                text-decoration:underline}#peppa-app a:hover{cursor:pointer}
         </style>`;
             $('head').append(css);
         },
         startApp() {
             this.appendToBody();
             setTimeout(() => {
-                githubApp.$mount('#wapuu-app');
+                peppaApp.$mount('#peppa-app');
             }, 3000);
         }
     };
 })(window, jQuery);
+
