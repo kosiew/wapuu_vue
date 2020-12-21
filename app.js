@@ -1,19 +1,19 @@
 (function (window, $) {
-    const appTemplate = `<div id="github-info-app" style="opacity: 1" >
+    const appTemplate = `<div id="wapuu-app" style="opacity: 1" >
                       <span>
                         <img id="wapuu-img"  
                         src="https://github.com/kosiew/wapuu_vue/blob/master/original_wapuu.png">
-                        <div class="pig-say">
-                            <div class="pig-info-arrow"></div>
-                            <div class="pig-info">
+                        <div class="wapuu-say">
+                            <div class="wapuu-info-arrow"></div>
+                            <div class="wapuu-info">
                                 <p><b>Wapuu:</b> {{message}} <br/>
                                 <span>User: {{userInfo.login}} / </span>
                                 <span>Repos: {{userInfo.public_repos}}<br></span>
                                 <span>Gists: {{userInfo.public_gists}} / </span>
                                 <span>Followers: {{userInfo.followers}}<br></span>     
-                                <div class="pig-info-more">
+                                <div class="wapuu-info-more">
                                 </div>              
-                                <div class="action-footer"><p>Thanks <a href="https://github.com/tobyqin">Toby</a> bringing me here ^_^</p></div>
+                                <div class="action-footer"><p>Thanks <a href="https://github.com/kosiew"> Siew </a> bringing me here ^_^</p></div>
                             </div>
                         </div>
                     </span>
@@ -64,10 +64,10 @@
         },
         addStyle() {
             const css = `<style type="text/css">
-              #github-info-app div,#github-info-app span,#github-info-app p,
-              #github-info-app h1,#github-info-app h2,#github-info-app h3,
-              #github-info-app h4,#github-info-app a,#github-info-app img,
-              #github-info-app b {
+              #wapuu-app div,#wapuu-app span,#wapuu-app p,
+              #wapuu-app h1,#wapuu-app h2,#wapuu-app h3,
+              #wapuu-app h4,#wapuu-app a,#wapuu-app img,
+              #wapuu-app b {
                   color:#fff;
                   font-family:HelveticaNeue,Helvetica,Arial,"Microsoft Yahei",sans-serif;
                   font-size:12px;
@@ -76,7 +76,7 @@
                   border:0;
                   box-sizing:border-box;
                   text-align:left}
-              #github-info-app{
+              #wapuu-app{
                   position:fixed;
                   left:-55px;
                   top:40%;
@@ -95,11 +95,11 @@
                   -moz-transform:rotate(-10deg);
                   -webkit-transform:rotate(-10deg);
                   -o-transform:rotate(-10deg);
-                  cursor:pointer}#wapuu-img:hover + .pig-say{visibility:visible;
+                  cursor:pointer}#wapuu-img:hover + .wapuu-say{visibility:visible;
                   width:auto}
-              #wapuu-img:hover + .pig-say .pig-email{
-                  visibility:hidden}#github-info-app .pig-say{visibility:collapse;
-                  width:0}#github-info-app .pig-say:hover{visibility:visible}#github-info-app .pig-info{height:100px;
+              #wapuu-img:hover + .wapuu-say .wapuu-email{
+                  visibility:hidden}#wapuu-app .wapuu-say{visibility:collapse;
+                  width:0}#wapuu-app .wapuu-say:hover{visibility:visible}#wapuu-app .wapuu-info{height:100px;
                   margin-left:123px;
                   margin-top:-35px;
                   background-color:#D40082;
@@ -114,13 +114,13 @@
                   border-radius:12px;
                   text-shadow:2px 2px 5px #333;
                   line-height:20px}
-            #github-info-app .pig-info a{
+            #wapuu-app .wapuu-info a{
                 text-decoration:none}
-            #github-info-app .pig-info a:hover{
+            #wapuu-app .wapuu-info a:hover{
                 text-decoration:underline}
-            #github-info-app .pig-info label{
+            #wapuu-app .wapuu-info label{
                 font-size:.5em}
-            #github-info-app .pig-info-arrow{
+            #wapuu-app .wapuu-info-arrow{
                 margin-left:110px;
                   margin-top:20px;
                   width:0;
@@ -128,34 +128,34 @@
                   border-top:13px solid transparent;
                   border-right:26px solid #D40082;
                   border-bottom:13px solid transparent}
-            #github-info-app .pig-info .action-header{
+            #wapuu-app .wapuu-info .action-header{
                 border-bottom:1px solid rgba(255,255,255,0.6);
-                  width:100px}#github-info-app .pig-info h3{margin-top:12px;
+                  width:100px}#wapuu-app .wapuu-info h3{margin-top:12px;
                   font-size:14px;
-                  font-weight:600}#github-info-app a.action-link{text-decoration:none;
-                  font-size:12px}#github-info-app a.action-link:hover{cursor:pointer;
+                  font-weight:600}#wapuu-app a.action-link{text-decoration:none;
+                  font-size:12px}#wapuu-app a.action-link:hover{cursor:pointer;
                   text-decoration:underline}
-            #github-info-app .pig-info-more{
+            #wapuu-app .wapuu-info-more{
                 visibility:collapse}
-            #github-info-app .pig-info:hover .pig-info-more{
+            #wapuu-app .wapuu-info:hover .wapuu-info-more{
                 visibility:visible}
-            #github-info-app .action-footer p,#github-info-app .action-footer a{
+            #wapuu-app .action-footer p,#wapuu-app .action-footer a{
                 position:relative;
                   margin-top:5px;
                   margin-bottom:0;
                   font-size:10px;
                   color:rgba(255,255,255,0.8)}
-            #github-info-app .action-footer a{
+            #wapuu-app .action-footer a{
                 cursor:pointer}
-            #github-info-app .action-footer a:hover{
-                text-decoration:underline}#github-info-app a:hover{cursor:pointer}
+            #wapuu-app .action-footer a:hover{
+                text-decoration:underline}#wapuu-app a:hover{cursor:pointer}
         </style>`;
             $('head').append(css);
         },
         startApp() {
             this.appendToBody();
             setTimeout(() => {
-                githubApp.$mount('#github-info-app');
+                githubApp.$mount('#wapuu-app');
             }, 3000);
         }
     };
